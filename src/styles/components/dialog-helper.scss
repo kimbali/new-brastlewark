@@ -1,0 +1,33 @@
+.dialog-helper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    img {
+        height: 7rem;
+        position: absolute;
+        right: 0;
+        bottom: 4rem;
+        transform: rotate(-30deg);
+    }
+
+    p {
+        background-color: $background;
+        width: 10rem;
+        min-height: 7rem;
+        @include centered();
+        border-radius: 100%;
+        padding: 1rem;
+        margin-right: 4.5rem;
+        font-size: 1.2rem;
+        font-family: $secondFont;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        img {
+            animation: fly 1s linear infinite;
+        }
+    }
+}

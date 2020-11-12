@@ -1,18 +1,20 @@
 
 import React from 'react'
+import DialogHelper from '../DialogHelper'
 import Header from './Header'
 
 
-export default function Layout({ children = null, id = '' }) {
+export default function Layout({ children = null, id = '', dialogHelperText = '' }) {
 
     return (
         <>
         <Header/>
-        <div className="main-content">
-          <article id={id}>
-            <main>{children}</main>
-          </article>
-        </div>
+        <article className="main-content" id={id}>
+          <main>{children}</main>
+          {
+            dialogHelperText ? <DialogHelper text={dialogHelperText}/> : null
+          }
+        </article>
       </>
     )
 }

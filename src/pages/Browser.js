@@ -6,6 +6,7 @@ import { createCouncilOfWisdomList, createWarriorsList, createTradesMembersList 
 
 export default function Browser() {
     const [calledGnomes, setCalledGnomes] = useState([]);
+    const [helperText, setHelperText] = useState("Let meet some gnomes!");
 
     const callCouncilOfWisdom = () => {
         const councilList = createCouncilOfWisdomList();
@@ -25,9 +26,9 @@ export default function Browser() {
     }
 
     return (
-        <Layout id='browser'>
+        <Layout id='browser' dialogHelperText={helperText}>
             <h2>Assemble members</h2>
-            <div>
+            <div className="centered-responsive">
                 <button type="button" onClick={callCouncilOfWisdom}>Council of Wisdom</button>
                 <button type="button" onClick={callWarriors}>The Warriors</button>
                 <TradesList callTradeMembers={callTradeMembers}/>
