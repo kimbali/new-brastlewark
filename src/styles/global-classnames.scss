@@ -1,0 +1,50 @@
+.scondary-font {
+    font-family: $secondFont;
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+.title-font {
+    font-family: $titlesFont;
+}
+
+button,
+.button {
+    cursor: pointer;
+    background-color: rgba($background, 0.8);
+    border: thin solid $primary;
+    padding: 0.75rem;
+    color: $primary;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0;
+    letter-spacing: 1px;
+    border-radius: 10px;
+
+    &:hover {
+        background-color: rgba($background, 1);
+        box-shadow: $downShadow;
+    }
+}
+
+select {
+    background: transparent;
+    border: none;
+    border-bottom: thin solid $primary;
+    outline: none;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.centered-responsive {
+    @include centered();
+
+    button,
+    select {
+        margin: 0 1rem 2rem;
+    }
+
+    @include media(papa-bear) {
+        flex-direction: row;
+    }
+}
