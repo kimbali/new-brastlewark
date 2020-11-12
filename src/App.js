@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React from 'react'
+import { Switch, Redirect, Route } from 'wouter';
 import './App.css';
+import useInitFetch from './components/hooks/useInitFetch';
+import Landing from './pages/Landing';
+import Browser from './pages/Browser';
+import GnomeDetails from './pages/GnomeDetails';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    useInitFetch();
+
+    return (
+      <div className="App">
+        <section className="App-content">
+          <Switch>
+            <Route path="/" component={Landing}/>
+            <Route path="/search" component={Browser}/>
+            <Route path="/gnome/:id" component={GnomeDetails}/>
+            <Redirect to="/search"/>
+          </Switch>
+        </section>
+      </div>
+    );
 }
 
 export default App;
