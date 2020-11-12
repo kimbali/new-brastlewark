@@ -13,12 +13,11 @@ export default function HeroNameInput({ formSubmit }) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="input-form" onSubmit={handleSubmit}>
             <label>
-                Enter your hero name
-                <input onChange={handleName} placeholder="Hero"/>
+                <input autoFocus onChange={handleName} placeholder="Enter you hero name"/>
             </label>
-            <button type="submit">Enter</button>
+            <button disabled={!heroName} type="submit">Introduce myself!</button>
         </form>
     )
 }

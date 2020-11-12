@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import HeroNameInput from '../components/common/HeroNameInput'
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import Layout from '../components/common/Layout/Layout';
 import { setStorageValue, getStorageValue } from '../global/methods';
 import { storageHeroName } from '../global/config';
 
 export default function Landing() {
     const [heroName, setHeroName] = useState('');
+    const [helperText, setHelperText] = useState("Let's anoncunce to the inhabitants that a hero has arrived at town!");
+    const [, setLocation] = useLocation();
 
     useEffect(() => {
        const heroNameInStorage = getStorageValue(storageHeroName)
@@ -16,23 +18,28 @@ export default function Landing() {
     const handleSubmit = (name) => {
         setHeroName(name);
         setStorageValue(storageHeroName, name);
+        setLocation('/search');
     }
 
     const changeHeroName = () => {
         setStorageValue(storageHeroName, '');
         setHeroName('');
+        setHelperText('Choose the right one this time!')
     }
 
     return (
-        <Layout id="landing" heroName={heroName}>
-            <h2>LANDING</h2>    
+        <Layout id="landing" dialogHelperText={helperText}>
+            <h2>Welcome to Brastlewark</h2>
             { 
-                heroName ? <button type="button" onClick={changeHeroName}>Change your name</button> 
-                        : <HeroNameInput formSubmit={handleSubmit} />
-            }
-
-            {
-                heroName ? <Link to={`/search`}>Meet Brastlewartienses</Link> : <p>Enter a hero name please!</p>
+                heroName ? <section>
+                                <p>Would you like to change your name, {heroName}?</p>
+                                <button type="button" onClick={changeHeroName}>Change name</button> 
+                                <Link to={`/search`}>Find Brastlewartienses</Link>
+                            </section>  
+                        :   <section>
+                                <p>Which hero are you?</p>  
+                                <HeroNameInput formSubmit={handleSubmit} />
+                            </section>
             }
         </Layout>
     )

@@ -8,9 +8,9 @@ export default function Header() {
 
     return (
         <header>
-            <Link to={'/'}><h1>BRASTLEWARK</h1></Link>
+            <Link to={'/search'}><h1>BRASTLEWARK</h1></Link>
             {
-                heroName ? <p>{heroName}</p> : null
+                heroName ? <Link to={'/'}><p className="scondary-font">{heroName}</p></Link> : null
             }
         </header>
     )
