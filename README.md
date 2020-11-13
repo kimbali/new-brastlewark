@@ -2,15 +2,16 @@
 
 <img alt="Magic mashroom"
     src="https://github.com/kimbali/new-brastlewark/blob/main/src/images/magic-mashroom-blue.png?raw=true"
-    style="float: left; height: 100px;" />
+    height="100px" />
 <img alt="Magic mashroom"
     src="https://github.com/kimbali/new-brastlewark/blob/main/src/images/magic-mashroom-red.png?raw=true"
-    style="float: center; height: 100px;" />
+    height="100px" />
 <img alt="Magic mashroom"
     src="https://github.com/kimbali/new-brastlewark/blob/main/src/images/magic-mashroom-blue.png?raw=true"
-    style="float: right; height: 100px;" />
+    height="100px" />
 
-## How was done?
+
+## How was done
 
 1. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -59,4 +60,3 @@ wouter is a tiny router for modern React and Preact apps that relies on Hooks.
 Include popular icons in your React projects easily with react-icons, which utilizes ES6 imports that allows you to include only the icons that your project is using.
 [react icons](https://react-icons.github.io/react-icons/)
 
-![AXA](https://media.giphy.com/media/l0Iy3xQexepGmkxQA/giphy.gif)
