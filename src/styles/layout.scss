@@ -14,6 +14,11 @@
         width: 100%;
         background: $background;
         @include centered(space-around, row);
+
+        h1,
+        p {
+            cursor: pointer;
+        }
     }
 
     .main-content {
@@ -24,6 +29,14 @@
         padding: 0.5rem;
         position: relative;
         overflow-x: scroll;
+
+        @include media(mama-bear) {
+            padding: 1rem;
+        }
+
+        @include media(papa-bear) {
+            padding: 2rem;
+        }
 
         section {
             @include centered(space-around);

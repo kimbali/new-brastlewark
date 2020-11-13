@@ -4,7 +4,7 @@
     right: 0;
 
     img {
-        height: 7rem;
+        height: 5rem;
         position: absolute;
         right: 0;
         bottom: 4rem;
@@ -13,12 +13,11 @@
 
     p {
         background-color: $background;
-        width: 10rem;
-        min-height: 7rem;
+        max-width: 12rem;
         @include centered();
         border-radius: 100%;
-        padding: 1rem;
-        margin-right: 4.5rem;
+        padding: 1.5rem;
+        margin-right: 3rem;
         font-size: 1.2rem;
         font-family: $secondFont;
     }
