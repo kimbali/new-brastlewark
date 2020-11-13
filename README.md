@@ -1,5 +1,3 @@
-# NEW BRASTLEWARK GNOME BROWSER
-
 <img alt="Magic mashroom"
     src="https://github.com/kimbali/new-brastlewark/blob/main/src/images/magic-mashroom-blue.png?raw=true"
     height="100px" />
@@ -9,7 +7,8 @@
 <img alt="Magic mashroom"
     src="https://github.com/kimbali/new-brastlewark/blob/main/src/images/magic-mashroom-blue.png?raw=true"
     height="100px" />
-
+    
+# NEW BRASTLEWARK GNOME BROWSER
 
 ## How was done
 
@@ -45,8 +44,8 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 Uses JEST && @testing-library/react
 
-See documentation here -> [JEST](https://jestjs.io/)
-See documentation here -> [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro/)
+- See documentation here -> [JEST](https://jestjs.io/)
+- See documentation here -> [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro/)
 
 ## Included libraries
 
@@ -55,8 +54,20 @@ See documentation here -> [@testing-library/react](https://testing-library.com/d
 wouter is a tiny router for modern React and Preact apps that relies on Hooks.
 [wouter documentation](https://www.npmjs.com/package/wouter)
 
+### node-sass
+
+use .scss for style files
+
 ### React Icons
 
 Include popular icons in your React projects easily with react-icons, which utilizes ES6 imports that allows you to include only the icons that your project is using.
 [react icons](https://react-icons.github.io/react-icons/)
 
+## TODO
+
+- [ ] ESLint integration
+- [ ] Test methods.js
+- [ ] Test components
+- [ ] Gnome detail scss
+- [ ] Gnome list scss
+- [ ] SEO with Helmet
