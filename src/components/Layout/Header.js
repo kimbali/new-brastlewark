@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'wouter';
-import { storageHeroName } from '../../../global/config'
-import { getStorageValue } from '../../../global/methods'
+import { storageHeroName } from '../../global/config'
+import { getStorageValue } from '../../global/methods'
 
 export default function Header() {
     const heroName = getStorageValue(storageHeroName);

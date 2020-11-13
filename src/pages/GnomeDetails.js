@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Layout from '../components/common/Layout/Layout';
+import Layout from '../components/Layout/Layout';
 import { findGnomeInStorage } from '../global/methods';
 
 export default function GnomeDetails({params}) {

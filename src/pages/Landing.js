@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import HeroNameInput from '../components/common/HeroNameInput'
+import HeroNameInput from '../components/HeroNameInput'
 import { Link, useLocation } from "wouter";
-import Layout from '../components/common/Layout/Layout';
+import Layout from '../components/Layout/Layout';
 import { setStorageValue, getStorageValue } from '../global/methods';
 import { storageHeroName } from '../global/config';
 

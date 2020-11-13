@@ -1,7 +1,6 @@
 import React from 'react'
 import { Switch, Route } from 'wouter';
-import './App.css';
-import useInitFetch from './components/hooks/useInitFetch';
+import useInitFetch from './hooks/useInitFetch';
 import Landing from './pages/Landing';
 import Browser from './pages/Browser';
 import GnomeDetails from './pages/GnomeDetails';

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
-import getData from '../../services/getData';
-import { setStorageJSON } from '../../global/methods';
-import { storageDataKey } from '../../global/config';
+import getData from '../services/getData';
+import { setStorageJSON } from '../global/methods';
+import { storageDataKey } from '../global/config';
 
 export default function useInitFetch() {
     useEffect(() => {

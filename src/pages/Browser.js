@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import GnomesList from '../components/common/GnomesList/GnomesList';
-import Layout from '../components/common/Layout/Layout';
-import TradesList from '../components/common/TradesList';
+import GnomesList from '../components/GnomesList/GnomesList';
+import Layout from '../components/Layout/Layout';
+import TradesList from '../components/TradesList';
 import { createCouncilOfWisdomList, createWarriorsList, createTradesMembersList } from '../global/methods'
 
 export default function Browser() {
@@ -21,16 +21,23 @@ export default function Browser() {
     const callTradeMembers = (event) => {
         event.preventDefault();
         const trade = event.target.value;
+        if(trade === 'default') setCalledGnomes([])
         const tradeMembers = createTradesMembersList(trade);
         setCalledGnomes(tradeMembers);
     }
 
     return (
         <Layout id='browser' dialogHelperText={helperText}>
-            <h2>Assemble members</h2>
+            <h2>Call gnomes</h2>
+            <p>
+            Gnomes in this town are not really social because they have too much work to do. Thats the reason they can have more than one job and may have few or even no friends at all. This is the perfect town to find workers that can repair succesfully your armour and weapons, they live to work so they will help you thankfully.
+            </p>
+            <p>
+            Find below the workers that you need:
+            </p>
             <div className="centered-responsive">
-                <button type="button" onClick={callCouncilOfWisdom}>Council of Wisdom</button>
-                <button type="button" onClick={callWarriors}>The Warriors</button>
+                <button type="button" onClick={callCouncilOfWisdom}>Call the Council of Wisdom</button>
+                <button type="button" onClick={callWarriors}>Call the Warriors</button>
                 <TradesList callTradeMembers={callTradeMembers}/>
             </div>
             <div>
