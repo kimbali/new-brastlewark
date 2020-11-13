@@ -1,13 +1,13 @@
 # NEW BRASTLEWARK GNOME BROWSER
 
 <img alt="Magic mashroom"
-    src="https://github.com/kimbali/starter/blob/master/src/images/magic-mashroom-blue.png?raw=true"
+    src="https://github.com/kimbali/new-brastlewark/blob/main/src/images/magic-mashroom-blue.png?raw=true"
     style="float: left; height: 100px;" />
 <img alt="Magic mashroom"
-    src="https://github.com/kimbali/starter/blob/master/src/images/magic-mashroom-red.png?raw=true"
+    src="https://github.com/kimbali/new-brastlewark/blob/main/src/images/magic-mashroom-red.png?raw=true"
     style="float: center; height: 100px;" />
 <img alt="Magic mashroom"
-    src="https://github.com/kimbali/starter/blob/master/src/images/magic-mashroom-blue.png?raw=true"
+    src="https://github.com/kimbali/new-brastlewark/blob/main/src/images/magic-mashroom-blue.png?raw=true"
     style="float: right; height: 100px;" />
 
 ## How was done?
