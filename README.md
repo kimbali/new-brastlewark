@@ -1,6 +1,31 @@
-# Getting Started with Create React App
+# NEW BRASTLEWARK GNOME BROWSER
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img alt="Magic mashroom"
+    src="https://github.com/kimbali/starter/blob/master/src/images/magic-mashroom-blue.png?raw=true"
+    style="float: left; height: 100px;" />
+<img alt="Magic mashroom"
+    src="https://github.com/kimbali/starter/blob/master/src/images/magic-mashroom-red.png?raw=true"
+    style="float: center; height: 100px;" />
+<img alt="Magic mashroom"
+    src="https://github.com/kimbali/starter/blob/master/src/images/magic-mashroom-blue.png?raw=true"
+    style="float: right; height: 100px;" />
+
+## How was done?
+
+1. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+2. Has 3 pages with its corresponging URL:
+
+   - Landing (Welcoming with an input to enter a name)
+   - Browser (Filter gnomes by age, size and trade)
+   - GnomeDetail (:neckbeard:)
+   - 404 (Redirected here when URL params have no coincidence)
+
+3. The homemade hook "useInitFetch" sotres fetched data into sessionStorage. Same hapens with the hero name. (I thought that it was no enough data to use Redux, but I know how to use it! :grimacing:).
+
+4. Global folder contains global vars and methods that are reused around all app.
+
+5. All pages are sorounded by "Layout" component, which contains the Header and the Dialog Helper, another component made by a Fairy whom guides the user through the app.
 
 ## Available Scripts
 
@@ -17,54 +42,21 @@ You will also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Uses JEST && @testing-library/react
 
-### `npm run build`
+See documentation here -> [JEST](https://jestjs.io/)
+See documentation here -> [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Included libraries
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Wouter
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+wouter is a tiny router for modern React and Preact apps that relies on Hooks.
+[wouter documentation](https://www.npmjs.com/package/wouter)
 
-### `npm run eject`
+### React Icons
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Include popular icons in your React projects easily with react-icons, which utilizes ES6 imports that allows you to include only the icons that your project is using.
+[react icons](https://react-icons.github.io/react-icons/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![AXA](https://media.giphy.com/media/l0Iy3xQexepGmkxQA/giphy.gif)
