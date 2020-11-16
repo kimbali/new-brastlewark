@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { createTradesList } from '../global/methods';
+import { createTradesList, getStorageJSON } from '../global/methods';
+import { storageDataKey } from '../global/config';
 
 export default function TradesList({ callTradeMembers }) {
     const [tradesList, setTradesList] = useState([])
 
     useEffect(() => {
-        const list = createTradesList();
+        const gnomesData = getStorageJSON(storageDataKey);
+        const list = createTradesList(gnomesData);
         setTradesList(list);
     }, [])
 

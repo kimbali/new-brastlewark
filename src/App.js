@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Switch, Route } from 'wouter';
-import useInitFetch from './hooks/useInitFetch';
+import getData from './services/getData';
 import Landing from './pages/Landing';
 import Browser from './pages/Browser';
 import GnomeDetails from './pages/GnomeDetails';
@@ -9,7 +9,10 @@ import ErrorPage from './pages/404';
 
 
 function App() {
-    useInitFetch();
+  useEffect(() => {
+    getData();
+  }, [])
+    
 
     return (
       <div className="App">

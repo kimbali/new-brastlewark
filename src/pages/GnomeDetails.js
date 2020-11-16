@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import Layout from '../components/Layout/Layout';
-import { findGnomeInStorage } from '../global/methods';
+import { findGnomeByID } from '../global/methods';
+import { getStorageJSON } from '../global/methods';
+import { storageDataKey } from '../global/config';
 
 export default function GnomeDetails({params}) {
     const [gnomeDetails, setGnomeDetails] = useState(null)
 
     useEffect(() => {
         const currentGnomeID = parseInt(params.id);
-        const currentGnomeDetails = findGnomeInStorage(currentGnomeID);
+        const gnomesData = getStorageJSON(storageDataKey);
+        const currentGnomeDetails = findGnomeByID(currentGnomeID, gnomesData);
         setGnomeDetails(currentGnomeDetails);
     }, [params])
 

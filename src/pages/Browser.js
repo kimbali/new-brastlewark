@@ -2,19 +2,22 @@ import React, { useState } from 'react'
 import GnomesList from '../components/GnomesList/GnomesList';
 import Layout from '../components/Layout/Layout';
 import TradesList from '../components/TradesList';
-import { createCouncilOfWisdomList, createWarriorsList, createTradesMembersList } from '../global/methods'
+import { createCouncilOfWisdomList, createWarriorsList, createTradesMembersList, getStorageJSON } from '../global/methods'
+import { storageDataKey } from '../global/config'
 
 export default function Browser() {
     const [calledGnomes, setCalledGnomes] = useState([]);
     const [helperText, setHelperText] = useState("Let meet some gnomes!");
 
     const callCouncilOfWisdom = () => {
-        const councilList = createCouncilOfWisdomList();
+        const gnomesData = getStorageJSON(storageDataKey);
+        const councilList = createCouncilOfWisdomList(gnomesData);
         setCalledGnomes(councilList);
     }
 
     const callWarriors = () => {
-        const warriorsList = createWarriorsList();
+        const gnomesData = getStorageJSON(storageDataKey);
+        const warriorsList = createWarriorsList(gnomesData);
         setCalledGnomes(warriorsList);
     }
 
@@ -22,7 +25,8 @@ export default function Browser() {
         event.preventDefault();
         const trade = event.target.value;
         if(trade === 'default') setCalledGnomes([])
-        const tradeMembers = createTradesMembersList(trade);
+        const gnomesData = getStorageJSON(storageDataKey);
+        const tradeMembers = createTradesMembersList(trade, gnomesData);
         setCalledGnomes(tradeMembers);
     }
 
